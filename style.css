@@ -103,4 +103,14 @@ img {
     gap: 10px;
     margin-bottom: 10px;
   }
+  .container-layOut {
+    gap: 5px;
+    grid-template-areas:
+      "header "
+      "navbar "
+      "main"
+      "side-bar"
+      "side-add"
+      "footer ";
+  }
 }
