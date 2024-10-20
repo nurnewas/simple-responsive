@@ -13,14 +13,26 @@ img {
   height: 100%;
 }
 .row > div {
-    flex: 1;
-    
+  flex: 1;
 }
 .vartical-img > img {
-    height: calc((100% - 10px) / 2);
+  height: calc((100% - 10px) / 2);
 }
 .repit-4-time {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 576px) {
+    .row {
+        flex-direction: column;
+        height: auto;
+        gap: 0; 
+    }
+    .repit-4-time  {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-bottom: 10px;
+    }
 }
