@@ -6,9 +6,21 @@ header > h1 {
   height: 400px;
   display: flex;
   gap: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 img {
   width: 100%;
   height: 100%;
+}
+.row > div {
+    flex: 1;
+    
+}
+.vartical-img > img {
+    height: calc((100% - 10px) / 2);
+}
+.repit-4-time {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
 }
