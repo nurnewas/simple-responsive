@@ -1,4 +1,4 @@
- h1 {
+h1 {
   margin: 0 auto;
   text-align: center;
 }
@@ -26,39 +26,81 @@ img {
 
 /* Grid Template Lay Out */
 .container {
-    display: grid;
-    grid-template-rows: repeat(3, 200px) 50px 50px;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-
+  display: grid;
+  grid-template-rows: repeat(3, 200px) 50px 50px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 .box {
-    background-color:  gray;
-   
+  background-color: gray;
 }
 #box-1 {
-    grid-row: span 5;
-    background-color: lightblue;
+  grid-row: span 5;
+  background-color: lightblue;
 }
-#box-6, #box-7,#box-9, #box-10 {
-    background-color: rgb(231, 76, 76);
+#box-6,
+#box-7,
+#box-9,
+#box-10 {
+  background-color: rgb(231, 76, 76);
 }
-#box-11, #box-12 {
-    grid-column: span 3;
-    background-color:  gray;
+#box-11,
+#box-12 {
+  grid-column: span 3;
+  background-color: gray;
 }
 
+/* Web Site Look Like  */
+.header,
+.nav-bar,
+.main,
+.side-bar,
+.side-add,
+.footer {
+  border-radius: 5px;
+  border: 1px solid tomato;
+  background-color: bisque;
+}
+.header {
+  grid-area: header;
+}
+.nav-bar {
+  grid-area: navbar;
+}
+.main {
+  grid-area: main;
+}
+.side-bar {
+  grid-area: side-bar;
+}
+.side-add {
+  grid-area: side-add;
+}
+.footer {
+  grid-area: footer;
+}
+.container {
+  display: grid;
+}
+.container-layOut {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "header header header header"
+    "navbar main main side-bar"
+    "navbar main main side-add"
+    "footer footer footer footer";
+}
 
 @media screen and (max-width: 576px) {
-    .row {
-        flex-direction: column;
-        height: auto;
-        gap: 0; 
-    }
-    .repit-4-time  {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
-        margin-bottom: 10px;
-    }
+  .row {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+  .repit-4-time {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 }
-
